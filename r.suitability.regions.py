@@ -49,6 +49,15 @@
 #% key_desc: float
 #% guisection: Input
 #%end
+#%option
+#% key: absminsuit
+#% description: Threshold below which cells are marked as fully unsuitable
+#% required: no
+#% type: string
+#% key_desc: float
+#% guisection: Input
+#%end
+
 #%flag
 #% key: d
 #% label: Clumps including diagonal neighbors
@@ -86,14 +95,6 @@
 #% required: no
 #% type: string
 #% answer: 0
-#% key_desc: float
-#% guisection: Remove gaps
-#%end
-#%option
-#% key: absminsuit
-#% description: Threshold below which cells are marked as fully unsuitable
-#% required: no
-#% type: string
 #% key_desc: float
 #% guisection: Remove gaps
 #%end

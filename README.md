@@ -8,7 +8,7 @@ The user defines a threshold suitability score. All raster cells with a suitabil
 href="https://grass.osgeo.org/grass78/manuals/r.reclass.area.html" 
 target="_blank">r.reclass.area</a> for more details.
 
-![](./option01.png)
+![](./option01.png)<br>
 _Figure 1: identifying regions of contiguous raster cells with a suitability score of 0.7 or more._
 
 You would use this to find suitable areas for a species that cannot or is not likely to venture into areas where conditions are not optimal. 
@@ -31,7 +31,7 @@ Next, the resulting output map is used instead of the original suitability map t
 
 As in the first use case, the selected raster cells are clumped into contiguous regions, and regions that are smaller than an user-defined size are removed. This option would be a good choice if the target species has no problem to briefly stay in non-suitable habitat, e.g., to cross it on their way to more suitable habitat. As the example below shows, it results in larger regions than in the previous option.
 
-![](./option02.png)
+![](./option02.png)<br>
 _Figure 2: Like figure 1, but based on the median suitability scores of the neighboring cells within a radius of 300 meter (3x3 moving window)._
 
 ### Option 3 - barriers
@@ -50,13 +50,14 @@ populations rather than one large (meta-)population. It can even result
 in a net loss of habitat if one or more of the fragments are too small 
 to maintain a population (the user can set a minimum area size to 
 account for this). 
-![](./option03.png)
+  
+![](./option03.png)<br>
 _Figure 3: Like figure 2, but considering raster cells with suitability 0 (mostly roads) as absolute barriers. Diagonally connected raster cells are not considered to form a contiguous region._
 
 Note that for line elements like roads, results may differ if the option to 'include the diagonal neighbors when defining clumps' 
 (flag d) is selected. For example, in figure 4, diagonally connected cells are considered as neighbors. As a consequence, the suitable areas on both sides of the road are considered to be part of the same region.I.e., the road does not act as a barrier here. 
 
-![](./option04.png)
+![](./option04.png)<br>
 _Figure 4: Like figure 3, but this time, diagonally connected raster cells are considered to form a contiguous region._
 
 ### Option 4 - compact areas
@@ -66,7 +67,7 @@ The user can opt to include patches of unsuitable areas that fall within suitabl
 This option can be used to end up with more compact areas. This may be desirable for visualisation purposes, or it may in fact be 
 acceptable to include such areas in the final selection of a region. 
 
-![](./option05.png)
+![](./option05.png)<br>
 _Figure 5: Like figure 3 (left), but here gaps (areas within a suitable region) of 500 hectares or less were included in the final selection (middle). The right map shows the suitable areas within the selected regions (green) and the filled gaps (yellow)._
 
 Selecting this option will generate a second map which shows the 'filled patches'. This makes it easier to e.g., inspect the 

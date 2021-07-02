@@ -2,6 +2,8 @@
 
 Multi-criteria or suitability analyses are useful methods to map the relative suitability. For example, they can be used to map the relative habitat suitability of a species, based on multiple criteria. A typical outcome of such analyses is a raster layer with suitability scores between 0 (not suitable) and 1 (very suitable). 
 
+Often, the next step is to use this suitability map to identify suitable area/region, e.g., to delineate potential areas for nature conservation. With this addon you can identify regions of contiguous cells that have a suitability score above a certain threshold and a minimum size. There are a number of additional options explored below.
+
 ### Option 1 - basic use
 
 The user defines a threshold suitability score. All raster cells with a suitability score equal or above the threshold are reclassified as suitable. All other raster cells are reclassified to NODATA. Next, all contiguous raster cells (i.e., all neighboring rastercells) are clumped. Clumps below an user-defined size (minimum area for fragments) are subsequently removed. See <a 

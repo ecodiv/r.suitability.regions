@@ -99,3 +99,5 @@ The add-on is based on the following add-ons/functions.
 
 Paulo van Breugel, paulo at ecodiv.earth
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5068633.svg)](https://doi.org/10.5281/zenodo.5068633)
+

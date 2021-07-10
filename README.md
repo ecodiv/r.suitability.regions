@@ -75,12 +75,26 @@ _Figure 5: Like figure 3 (left), but here gaps (areas within a suitable region) 
 Selecting this option will generate a second map which shows the 'filled patches'. This makes it easier to e.g., inspect the 
 feasibility or desirability to actually include these areas in a protected area. 
 
+### Compactness of the regions
+
+To compare the compactness of the resulting regions, the compactness 
+of an area is calculated using the formula below (see also [v.to.db](https://grass.osgeo.org/grass78/manuals/v.to.db.html). 
+
+<p><pre><code>compactness = perimeter / (2 * sqrt(PI * area))</code></pre>
+
+This will create a layer with the basename with the suffix 
+'compactness'. The compactness will also be calculated as one of the 
+region statistics if the option to save the result as a vector layer is 
+selected (see under 'other options' below.
+
 ### Other options
 
-The user can opt to save two intermediate layers: the layer showing all raster cells with a suitability higher than the threshold (flag k; file name as 
-suffix _allsuitableareas_), and the layer with the suitability based on focal statistics (flag f; file name as suffix _focalsuitability_). 
+raster cells with a suitability higher than the threshold (flag k; file name with the suffix _allsuitableareas_), and the layer with the suitability based on focal statistics (flag f; file name with suffix _focalsuitability_). There is furthermore the option to create a layer with the average suitability per clump (flag z), and a layer with the surface area (in hectares) of the clumped regions (flag a).
 
-There is furthermore the option to create a layer with the average suitability per clump (flag z), and a layer with the surface area (in hectares) of the clumped regions (flag a).
+Selecting the 'v' flag will create a vector layer with the regions. The attribute table of this vector layer will include columns with the surface area (m2), compactness, fractal dimension (_fd_), and 
+average suitability. For the meaning of compactness, see above. The fractal dimension of the boundary of a polygon is calculated using the formula below (see also [v.to.db](https://grass.osgeo.org/grass78/manuals/v.to.db.html).
+
+<p><pre><code> <code>fd = 2 * (log(perimeter) / log(area))</code></pre>
 
 ## NOTE
 
@@ -94,6 +108,7 @@ The add-on is based on the following add-ons/functions.
 
 - [r.reclass.area](https://grass.osgeo.org/grass78/manuals/r.reclass.area.html)
 - [r.clump](https://grass.osgeo.org/grass78/manuals/r.clump.html)
+- [v.to.db](https://grass.osgeo.org/grass78/manuals/v.to.db.html)
 
 ## AUTHOR
 

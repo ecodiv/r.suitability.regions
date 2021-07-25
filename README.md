@@ -33,8 +33,8 @@ Next, the resulting output map is used instead of the original suitability map t
 
 As in the first use case, the selected raster cells are clumped into contiguous regions, and regions that are smaller than an user-defined size are removed. This option would be a good choice if the target species has no problem to briefly stay in non-suitable habitat, e.g., to cross it on their way to more suitable habitat. As the example below shows, it results in larger regions than in the previous option.
 
-![based on the median suitability scores of the neighboring cells within a radius of 300 meter ](./option02.png)<br>
-_Figure 2: Like figure 1, but based on the median suitability scores of the neighboring cells within a radius of 300 meter (3x3 moving window)._
+![based on the median suitability scores of the neighboring cells within 300 meter ](./option02.png)<br>
+_Figure 2: Like figure 1, but based on the median suitability scores of the neighboring cells within 300 meter (3x3 moving window)._
 
 ### Option 3 - barriers
 

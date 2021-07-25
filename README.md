@@ -103,6 +103,10 @@ This addon is based on the _r.reclass.area_ function. Like in that function, the
 
 The option to calculate the area of clumped regions should be used with projected layers only because the assumption is that all cells have the same size.
 
+## Examples
+
+See [this tutorial](https://ecodiv.earth/TutorialsNotes/SuitabilityRegions/index.html) for examples.
+
 ## See also
 
 The add-on is based on the following add-ons/functions.
